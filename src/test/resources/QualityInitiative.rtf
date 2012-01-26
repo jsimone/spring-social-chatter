@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17020\viewh12140\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 I'm OOO and will miss Today's planning meeting. I was hoping to dial in, but it looks like I won't be able to. \
+\
+As part of the Heroku wide quality initiative that is taking place over the next two months we have to present our quality plan on 10/12. I put together some initial thoughts around what I think should go in there. Most of these are based on discussions that we've had. I'd like to get some feedback and info on things I've missed if you guys can discuss it this afternoon. Keep in mind that this doesn't have to only be things that we'll do in the next 2 months. We can de-prioritize some of it, but this is a good time to get it all on the radar. I tried to roughly prioritize these as well. most important first.\
+\
+- 
+\f1\fs26 Provide further documentation of the use of different frameworks and standards on the platform\
+	- More examples showing people how you can use JEE APIs in a non-JEE container\
+	- On a high level: Our developers will all use parts of JEE for their apps. However we don't "support JEE" because we don't show/support a container that implements the full spec. We need more documentation around this.\
+
+\f0\fs24 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf0 - Review usability of the Java getting started process\
+	- Need to define what this means. The embedded container approach makes it hard to port an existing app. We've said that we aren't targeting existing apps with that approach so maybe this is OK, but we need a second approach for existing apps. What might that look like and how can we differentiate the two to developers? If we don't want to change anything maybe we just be more explicit about only being for new apps.\
+	- Any improvements to the process that we can make even for new apps\
+
+\f0\fs24 \
+- Automated testing for the language packs\
+
+\f1\fs26 	- Test framework that deploys apps in each language and tests their behavior.\
+	- Probably more detailed and more like looping through multiple apps for a single language than looping through languages like wolfpack does.\
+	- This could be rolled up into a way to test examples from our docs too\
+	- Ideally we'll design a framework that can also be used by non-JVM language packs after we're done\
+\
+Automate the deployment of language packs\
+	- Look into how we can put CI in place to run our automated tests and enable a more push button process around language pack deployment and rollback\
+
+\f0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Visibility\
+	- We have little visibility into what people are doing with their Java apps. Maven could be a great window into this for us. It would be awesome to be able to start counting how many apps use and group certain dependencies so that we can get a profile of the types of apps peopler are creating.\
+	- Need to also find out what other languages (mostly Ruby) do already around this too. We're probably in the dark on some things that others are already using here. Add-on usage within the language is something that immediately comes to mind here, but I'm sure there are others.\
+}
