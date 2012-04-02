@@ -8,7 +8,7 @@ import org.springframework.social.support.URIBuilder;
 
 public class ChatterTemplate extends AbstractOAuth2ApiBinding implements Chatter {
 
-	public static final String API_VERSION = "v22.0";
+	public static final String API_VERSION = "v23.0";
 	
 	public ChatterTemplate(String accessToken) {
 		super(accessToken);
@@ -24,7 +24,7 @@ public class ChatterTemplate extends AbstractOAuth2ApiBinding implements Chatter
 	}
 	
 	public ChatterFeed getPosts() {
-	    return getRestTemplate().getForObject(buildUri("/services/data/" + API_VERSION + "/chatter/feeds/news/me"),
+	    return getRestTemplate().getForObject(buildUri("/services/data/" + API_VERSION + "/chatter/feeds/news/me/feed-items"),
 	    		ChatterFeed.class);
 	}
 

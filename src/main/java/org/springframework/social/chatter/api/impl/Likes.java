@@ -6,6 +6,7 @@ import java.util.List;
 public class Likes{
    	private String currentPageUrl;
    	private List<Like> likes;
+   	private Like myLike;
    	private String nextPageUrl;
    	private String previousPageUrl;
    	private Number total;
@@ -22,7 +23,13 @@ public class Likes{
 	public void setLikes(List<Like> likes){
 		this.likes = likes;
 	}
- 	public String getNextPageUrl() {
+ 	public Like getMyLike() {
+		return myLike;
+	}
+	public void setMyLike(Like myLike) {
+		this.myLike = myLike;
+	}
+	public String getNextPageUrl() {
 		return nextPageUrl;
 	}
 	public void setNextPageUrl(String nextPageUrl) {

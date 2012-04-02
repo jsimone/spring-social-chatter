@@ -20,6 +20,7 @@ import org.springframework.social.chatter.api.Chatter;
 import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.ConnectionValues;
 import org.springframework.social.connect.UserProfile;
+import org.springframework.social.connect.UserProfileBuilder;
 
 /**
  * Facebook ApiAdapter implementation.
@@ -46,15 +47,11 @@ public class ChatterAdapter implements ApiAdapter<Chatter> {
 	}
 
 	public UserProfile fetchUserProfile(Chatter chatter) {
-		//TODO: implement after user profile api is set up
-//		FacebookProfile profile = facebook.userOperations().getUserProfile();
-//		return new UserProfileBuilder().setName(profile.getName()).setFirstName(profile.getFirstName()).setLastName(profile.getLastName()).
-//			setEmail(profile.getEmail()).setUsername(profile.getUsername()).build();
+		return new UserProfileBuilder().build();
 	}
 	
 	public void updateStatus(Chatter chatter, String message) {
-		//TODO: implement after status update call is created
-//		facebook.feedOperations().updateStatus(message);
+		//TODO: Method has no effect
 	}
 
 }

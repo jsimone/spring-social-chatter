@@ -9,15 +9,20 @@ public class ChatterItem{
    	private Comments comments;
    	private String createdDate;
    	private boolean event;
+   	private String attachment;
    	private String id;
    	private Likes likes;
+   	private boolean isLikedByCurrentUser;
+   	private Like currentUserLike;
    	private String modifiedDate;
    	private String parentId;
    	private String parentName;
    	private String type;
    	private String url;
+   	private String photoUrl;
    	private List<SupplementalProperty> supplementalProperties;
-	private User user;
+	private User parent;
+	private User actor;
 
  	public Body getBody(){
 		return this.body;
@@ -49,7 +54,13 @@ public class ChatterItem{
 	public void setEvent(boolean event){
 		this.event = event;
 	}
- 	public String getId(){
+ 	public String getAttachment() {
+		return attachment;
+	}
+	public void setAttachment(String attachment) {
+		this.attachment = attachment;
+	}
+	public String getId(){
 		return this.id;
 	}
 	public void setId(String id){
@@ -61,7 +72,19 @@ public class ChatterItem{
 	public void setLikes(Likes likes){
 		this.likes = likes;
 	}
- 	public String getModifiedDate(){
+ 	public boolean isLikedByCurrentUser() {
+		return isLikedByCurrentUser;
+	}
+	public void setIsLikedByCurrentUser(boolean isLikedByCurrentUser) {
+		this.isLikedByCurrentUser = isLikedByCurrentUser;
+	}
+	public Like getCurrentUserLike() {
+		return currentUserLike;
+	}
+	public void setCurrentUserLike(Like currentUserLike) {
+		this.currentUserLike = currentUserLike;
+	}
+	public String getModifiedDate(){
 		return this.modifiedDate;
 	}
 	public void setModifiedDate(String modifiedDate){
@@ -91,6 +114,12 @@ public class ChatterItem{
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	public String getPhotoUrl() {
+		return photoUrl;
+	}
+	public void setPhotoUrl(String photoUrl) {
+		this.photoUrl = photoUrl;
+	}
 	public List<SupplementalProperty> getSupplementalProperties() {
 		return supplementalProperties;
 	}
@@ -98,10 +127,16 @@ public class ChatterItem{
 			List<SupplementalProperty> supplementalProperties) {
 		this.supplementalProperties = supplementalProperties;
 	}
- 	public User getUser(){
-		return this.user;
+ 	public User getParent(){
+		return this.parent;
 	}
-	public void setUser(User user){
-		this.user = user;
+	public void setParent(User parent){
+		this.parent = parent;
+	}
+	public User getActor() {
+		return actor;
+	}
+	public void setActor(User actor) {
+		this.actor = actor;
 	}
 }

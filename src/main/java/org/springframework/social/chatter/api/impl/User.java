@@ -6,10 +6,14 @@ public class User{
    	private String firstName;
    	private String id;
    	private String lastName;
+   	private String companyName;
+   	private String mySubscription;
    	private String name;
    	private Photo photo;
+   	private boolean isChatterGuest;
    	private String title;
    	private String url;
+   	private String type;
 
  	public String getFirstName(){
 		return this.firstName;
@@ -29,7 +33,25 @@ public class User{
 	public void setLastName(String lastName){
 		this.lastName = lastName;
 	}
- 	public String getName(){
+ 	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+	public String getMySubscription() {
+		return mySubscription;
+	}
+	public void setMySubscription(String mySubscription) {
+		this.mySubscription = mySubscription;
+	}
+	public boolean isChatterGuest() {
+		return isChatterGuest;
+	}
+	public void setIsChatterGuest(boolean isChatterGuest) {
+		this.isChatterGuest = isChatterGuest;
+	}
+	public String getName(){
 		return this.name;
 	}
 	public void setName(String name){
@@ -52,6 +74,12 @@ public class User{
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 
 }
